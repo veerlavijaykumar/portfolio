@@ -1,0 +1,694 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vijay's Portfolio</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
+        * {
+            color: white;
+            padding: 0;
+            margin: 0;
+            font-weight: bolder;
+            font-family: 'Ubuntu',sans-serif;
+        }
+        #photo {
+            background-image: url('https://png.pngtree.com/thumb_back/fh260/background/20231027/pngtree-hexagonal-abstract-background-with-a-black-textured-surface-image_13704307.png');
+            height: 100vh;
+            background-size: cover;
+            background-repeat: no-repeat;
+        }
+        #container {
+            width: 100vw;
+            display: flex;
+            height: 70px;
+            justify-content: space-around;
+            position: fixed;
+        }
+        #logo {
+            display: flex;
+            width: 400px;
+            justify-content: center;
+            align-items: center;
+            font-size: 37px;
+            font-family: 'Ubuntu',sans-serif;
+        }
+        #navbar {
+            display: flex;
+            align-items: center;
+            gap: 25px;
+            font-family: 'Ubuntu',sans-serif;
+        }
+        a {
+            text-decoration: none;
+            font-size: 18px;
+        }
+        #content {
+            width:800px;
+            height:800px;
+            font-family: 'Ubuntu',sans-serif;
+            display:flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            
+            
+        }
+        h3 {
+            font-size: 30px;
+            font-weight: 100;
+        }
+        h1 {
+            font-size: 50px;
+            margin: 10px 0;
+        }
+        h2 {
+            font-size: 40px;
+            margin: 20px 0;
+            font-weight: 500;
+        }
+        .typing-container {
+            font-size: 40px;
+            display: inline-block;
+        }
+        .cursor {
+            display: inline-block;
+            width: 2px;
+            background-color: crimson;
+            animation: blink 0.7s step-end infinite;
+        }
+        @keyframes blink {
+            from, to {
+                background-color: transparent;
+            }
+            50% {
+                background-color: crimson;
+            }
+        }
+    .button {
+    width: 200px;
+    height: 70px;
+    background-color: crimson;
+    font-size: 25px;
+    font-family: 'Ubuntu', sans-serif;
+    border-radius: 15px;
+    color: white;
+    text-align: center;
+    line-height: 70px;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+.button:hover {
+    background-color: darkred;
+}
+.button a {
+    color: white;
+    font-size: 25px;
+    text-decoration: none;
+}
+#two {
+    width: 100vw;
+   height:100vh;
+    background-color: #f0f0f0; 
+    padding-top: 70px; 
+}
+#pos {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px; 
+}
+#about-me {
+    font-size: 40px;
+    font-family: 'Ubuntu', sans-serif;
+    font-weight: 400;
+    color: black;
+    text-align: center; 
+    margin-bottom: 20px; 
+}
+#vijay {
+    display: flex;
+    
+    gap: 50px;
+    align-items: center;
+    justify-content: center;
+    padding: 20px; 
+    height:600px;
+}
+#info {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    max-width: 600px; 
+}
+#name {
+    color: black;
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 35px;
+    text-align: center; 
+    margin-bottom: 20px; 
+}
+p {
+    color: black;
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 20px;
+    font-weight: 100;
+}
+#vijay img {
+    border-radius: 50%;
+    width: 300px;
+    height: 300px;
+}
+#info p a {
+    color: blue;
+}
+#three
+{
+    width:100vw;
+    height:100vh;
+    background-color: black;
+}
+     
+#heading
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height:250px;
+}
+#skills
+{
+    font-size: 37px;
+    font-family: 'Ubuntu',sans-serif;
+
+}
+#box-place
+{
+    height:528px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap:50px;
+}
+.skill-box
+{
+    width:300px;
+    height:300px;
+    background-color: #222222;
+    border-radius:20px;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+   
+}
+.skill-box h3
+{
+    font-family: 'Ubuntu',sans-serif;
+}
+.skill-box:hover
+{
+    background-color: crimson;
+}
+#four
+{
+    width:100vw;
+    height:100vh;
+    background-color: white;
+}
+#head2
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height:250px;
+   
+}
+#creative
+{
+    height:400px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+#content3
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    width:400px;
+}
+#content3 h3
+{
+    color:black;
+}
+.percent
+{
+    display: flex;
+    justify-content: space-between;
+    width:500px;
+    height:50px;
+}
+#five
+{
+    width:100vw;
+    height:100vh;
+    background-color: black;
+}
+#head3
+{
+    display:flex;
+    height:250px;
+    justify-content: center;
+    align-items: center;
+}
+#contact-details
+{
+    display:flex;
+    justify-content: space-evenly;
+}
+#contact-box
+{
+    width:450px;
+    height:400px;
+    background-color: #222222;
+    border-radius: 20px;
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    gap:25px;
+}
+.icon
+{
+    display:flex;
+    width:400px;
+    gap:40px;
+}
+#contact-box p
+{
+    color:white;
+}
+#contact-box:hover
+{
+    background-color: crimson;
+}
+#message
+{
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width:500px;
+    height:300px;
+    gap:20px;
+}
+#btn-group
+{
+    display:flex;
+    gap:10px;
+}
+#footer
+{
+    width:100vw;
+    height:70px;
+    background-color: crimson;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+/* Base Styles */
+@media(max-width: 1200px) {
+    #container {
+        flex-direction: column;
+        height: auto;
+    }
+    #logo {
+        width: 100%;
+    }
+    #navbar {
+        flex-direction: column;
+        gap: 10px;
+    }
+}
+
+@media(max-width: 900px) {
+    #container {
+        flex-direction: column;
+        height: auto;
+    }
+    #logo {
+        font-size: 30px;
+    }
+    #navbar {
+        display: none;
+    }
+    #logo1 {
+        display: inline;
+    }
+    #content h1 {
+        font-size: 40px;
+    }
+    #content {
+        width: 90%;
+        margin: 0 auto;
+    }
+}
+
+@media(max-width: 768px) {
+    #content {
+        width: 100%;
+    }
+    #vijay {
+        flex-direction: column;
+        height: auto;
+    }
+    #vijay img {
+        width: 250px;
+        height: 250px;
+    }
+    #info {
+        width: 90%;
+    }
+    #box-place {
+        flex-direction: column;
+        gap: 20px;
+    }
+    .skill-box {
+        width: 100%;
+        height: auto;
+    }
+    #creative {
+        flex-direction: column;
+    }
+    #content3 {
+        width: 90%;
+    }
+}
+
+@media(max-width: 600px) {
+    #container {
+        flex-direction: column;
+        height: auto;
+    }
+    #logo {
+        font-size: 24px;
+    }
+    #navbar {
+        display: none;
+    }
+    #logo1 {
+        display: inline;
+    }
+    #content h1 {
+        font-size: 36px;
+    }
+    #content h2 {
+        font-size: 28px;
+    }
+    #about-me {
+        font-size: 32px;
+    }
+    #vijay {
+        flex-direction: column;
+        height: auto;
+    }
+    #info {
+        width: 100%;
+        text-align: center;
+    }
+    #contact-details {
+        flex-direction: column;
+    }
+    #contact-box {
+        width: 90%;
+        height: auto;
+    }
+    #message {
+        width: 90%;
+    }
+    #footer {
+        font-size: 14px;
+        text-align: center;
+    }
+}
+
+@media(max-width: 400px) {
+    #content {
+        margin-left: 20px;
+    }
+    #content h1 {
+        font-size: 30px;
+    }
+    #logo1 {
+        display: inline;
+    }
+    #navbar {
+        display: none;
+    }
+    #vijay {
+        flex-direction: column;
+        height: auto;
+    }
+    #three {
+        height: 100vh;
+        margin-top:500px;
+    }
+    #heading {
+        flex-direction: column;
+    }
+    .skill-box {
+        flex-direction: column;
+        width: 90%;
+    }
+    #four
+    {
+        height:100vh;
+        flex-direction: column;
+        align-items: center;
+        margin-top:200px;
+    }
+   
+    #contact-box {
+       
+        width: 100%;
+    }
+    #content2
+    {
+        text-align: center;
+    }
+    #five
+    {
+        margin-top: 300px;
+    }
+    #footer
+    {
+        margin-top:100px;
+    }
+
+}
+
+    </style>
+</head>
+<body>
+    <div id="photo">
+        <div id="container">
+            <div id="logo">
+                <div>Portfo<span style="color:crimson" id="lio">lio.</span></div>
+            </div>
+            <div id="logo1" style="display:none"><i class="fa-solid fa-bars"></i></div>
+            <div id="navbar">
+                <a href="index.html">Home</a>
+                <a href="#two">About</a>
+                <a href="#three">Skills</a>
+                <a href="#four">Talents</a>
+                <a href="#five">Contact Me</a>
+            </div>
+        </div>
+        <div id="content">
+            <h3>Hello, my name is</h3>
+            <h1>V. Vijay Kumar</h1>
+            <h2>And I'm a </h2><span class="typing-container"><span class="typed-text"></span><span class="cursor">&nbsp;</span></span>
+            <button class="button"><a href="#two">About Me</a></button>
+        </div>
+    </div>
+    <div id="two">
+        <div id="pos">
+      <div id="about-me" style="font-size: 40px;font-family:'Ubuntu',sans-serif;;font-weight:400;color:black">About me<br>
+<span style="color:crimson;font-size: 20px;margin-left:20px">---who i am ---</span></div>
+    </div>
+    <div id="vijay">
+        <img src="my.jpeg">
+        <div id="info">
+            <div id="name">VIJAY</div><hr>
+        <p>I am Vijay Kumar. I am a Programmer,interested in solving real-world problems.
+            I am a Machine Learning Enthusiast and AI aspirant . At present,I am learning DSA+Java. I did many projects including 
+       <p> 1.Eamcet-Guider(a web-application which predicts colleges based on Eamcet-Rank)
+          <br>Check-Out-Link:<a href='https://eamcetguider.onrender.com/details' target="_blank">Link</a></p>
+        <p>2.Coding-Contest( a web-application which is used to upload problems by the admin which are to be solved by the participants)
+      <br>Check-Out-Link:<a href='https://coding-contest-1.onrender.com/ind' target="_blank">Link</a></p>
+       <p>3.Apna-Trip( a web-application which is used for travelling purpose )
+       <br>Check-Out-Link:<a href='https://apnatrip.vercel.app/' target="_blank">Link</a></p>
+       <button class="button"><a href="#three">My Skills</a></button>
+        </p>
+
+   
+</div>
+
+</div>
+</div>
+<div id="three">
+    <div id="heading">
+<h2 id="skills">My Skills<br><span style="font-size:20px;color:crimson "><span style="color:white">---</span>what i provide<span style="color:white">---</span></span></h2>
+</div>
+<div id="box-place">
+    <div class="skill-box">
+        <h3><i class="fa-solid fa-paintbrush" style="color:crimson;font-size: 50px;"></i></h3>
+        <h3>Figma</h3>
+        <h3>UI/UX Design</h3>
+        <h3>Web Design</h3>
+        <p style="color:white">HTML,CSS and JavaScript</p>
+    </div>
+    <div class="skill-box">
+        <h3><i class="fa-solid fa-chart-line" style="color:crimson;font-size: 50px;"></i></h3>
+        <h3>App</h3>
+        <h3>Development</h3>
+        <p style="color:white">Java,Kotlin</p>
+    </div>
+    <div class="skill-box">
+        <h3><i class="fa-solid fa-code" style="color:crimson;font-size: 50px;"></i></h3>
+        <h3>Programming</h3>
+        <p style="color:white">C,Python,Java,JavaScript,.Net Programming</p>
+    </div>
+    <div class="skill-box">
+        <h3><i class="fas fa-server" style="color:crimson;font-size: 50px;" ></i></h3>
+        <h3>Backend</h3>
+        <h3>Development</h3>
+        <p style="color: white;">Node Js,Express,MongoDB</p>
+    </div>
+</div>
+</div>
+<div id="four">
+    <div id="head2">
+    <h2 id="skills" style="color:black">My Skills<br><span style="font-size:20px;color:crimson "><span style="color:black">---</span>what i know<span style="color:black">---</span></span></h2>
+    </div>
+    <div id="creative">
+        <div id="content2">
+          <h3 style="color:black">My creative Skills&Experiences.</h3>
+          <p>These are some of them.</p>
+          <button class="button"><a href="#five">Contact Me</a></button>
+        </div>
+        <div id="content3">
+            <div class="percent"><h3>Figma</h3>
+            <h3>90%</h3></div>
+            <progress value="90" max="100" style="width: 500px"></progress>
+            <div class="percent"><h3>UI/UX</h3>
+            <h3>70%</h3></div>
+            <progress value="70" max="100" style="width: 500px;"></progress>
+            <div class="percent"><h3>HTML</h3>
+            <h3>85%</h3></div>
+            <progress value="85" max="100" style="width: 500px;"></progress>
+            <div class="percent"> <h3>CSS</h3>
+            <h3>85%</h3></div>
+           <progress value="85" max="100" style="width: 500px;"></progress>
+           <div class="percent"><h3>JS</h3>
+            <h3>70%</h3></div>
+          <progress value="70" max="100" style="width: 500px;"></progress>
+          <div class="percent"> <h3>React</h3>
+            <h3>50%</h3></div>
+           <progress value="50" max="100" style="width: 500px;"></progress>
+           <div class="percent"> <h3>Node</h3>
+            <h3>55%</h3></div>
+           <progress value="55" max="100" style="width: 500px;"></progress>
+           <div class="percent"><h3>Express</h3>
+            <h3>60%</h3></div>
+           <progress value="60" max="100" style="width: 500px;"></progress>
+           <div class="percent"><h3>Python</h3>
+            <h3>65%</h3></div>
+           <progress value="65" max="100" style="width: 500px;"></progress>
+        </div>
+    </div>
+</div>
+<div id="five">
+    <div id="head3">
+        <h2 id="contact" style="color:white">Contact Me<br><span style="font-size:20px;color:crimson "><span style="color:white">---</span>Get in touch<span style="color:white">---</span></span></h2>
+        </div>
+        <div id="contact-details">
+    <div id="contact-box">
+     <h3>Get in Touch</h3>
+     <p>If you want any advice,Contact me</p>
+     <div class="icon">
+        <h3><a href="tel:+919652195634" target="_blank"><i class="fa-solid fa-user" style="color:crimson"></i></a></h3>
+        <h3>Name<p>Vijay Kumar</p></h3>
+     </div>
+     <div class="icon">
+        <h3><a href="https://maps.app.goo.gl/SNgdrkXcaFHURZB87" target="_blank"><i class="fa-solid fa-location-dot" style="color: crimson;"></i></a></h3>
+        <h3>Address<p>Andhra Pradesh,India</p></h3>
+     </div>
+     <div class="icon">
+        <h3><a href="mailto:vijaykumarveerla3377@gmail.com" target="_blank"><i class="fa-solid fa-envelope" style="color: crimson;"></i></a></h3>
+        <h3>Email<p>vijaykumarveerla3377@gmail.com</p></h3>
+     </div>
+        </div>
+        <div id="message">
+    <h3>Message Me</h3>
+    <div id="btn-group">
+     <button class="button"><a href="https://wa.me/9652195634" target="_blank">Whatsapp</a></button>
+     <button class="button"><a href="https://www.linkedin.com/in/veerla-vijay-kumar-yadav-30597b269?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank">Linkedin</a></button>
+    </div>
+    
+    </div>
+</div>
+</div>
+<div id="footer">
+<p style="color:white">Created by <span style="color:black;font-size: 30px">Vijay Kumar</span>|&copy All rights reserved.</p>
+</div>
+
+    <script>
+        const words = ["Programmer", "Software Developer", "Music Lover", "Designer","Gamer"];
+        let wordIndex = 0;
+        let letterIndex = 0;
+        const typingSpeed = 150;
+        const erasingSpeed = 100;
+        const delayBetweenWords = 1000;
+        const typedTextSpan = document.querySelector(".typed-text");
+        const cursorSpan = document.querySelector(".cursor");
+
+        function type() {
+            if (letterIndex < words[wordIndex].length) {
+                typedTextSpan.textContent += words[wordIndex].charAt(letterIndex);
+                typedTextSpan.style.color='crimson';
+                letterIndex++;
+                setTimeout(type, typingSpeed);
+            } else {
+                setTimeout(erase, delayBetweenWords);
+            }
+        }
+
+        function erase() {
+            if (letterIndex > 0) {
+                typedTextSpan.textContent = words[wordIndex].substring(0, letterIndex - 1);
+                letterIndex--;
+                setTimeout(erase, erasingSpeed);
+            } else {
+                wordIndex++;
+                if (wordIndex >= words.length) wordIndex = 0;
+                setTimeout(type, typingSpeed + 500);
+            }
+        }
+
+        document.addEventListener("DOMContentLoaded", function() {
+            if (words.length) setTimeout(type, delayBetweenWords + 250);
+        });
+        window.onscroll = function() {
+    document.getElementById('lio').style.color = window.scrollY > 0 ? 'white' : 'crimson';
+    document.getElementById('container').style.backgroundColor = window.scrollY > 50 ? 'crimson' : 'transparent';
+};
+
+    </script>
+</body>
+</html>
